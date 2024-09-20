@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.navigation {
+  display: flex;
+  margin-left: 3rem;
+  gap: 1rem;
+}
+
+li {
+  padding: 0.3rem 2rem;
+}
+.nav-active {
+  background-color: $color2;
+  border-radius: 20px;
+}

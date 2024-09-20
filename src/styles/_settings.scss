@@ -1,0 +1,28 @@
+$font-1: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$white: rgb(243, 243, 243);
+// background of the app :
+$color1: #212040;
+// active buttons :
+$color2: #526ee3;
+// background for movie-cards :
+$color3: #2c2b41;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $white;
+}
+
+body {
+  background: $color1;
+  font-family: $font-1;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
