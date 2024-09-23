@@ -1,75 +1,72 @@
-.container-for-all-cards {
+.card-container {
+  // position relative for the below button add to favorite, which will be absolute
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  .card-container {
-    // postion relative for the below button add to favorite, which will be absolute
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 1rem;
-    width: 20rem;
-    height: 46rem;
-    background: #060d2c;
-    border-radius: 18px;
-    .movie-picture {
-      border-radius: 28px;
-      padding: 1rem;
-      filter: drop-shadow(rgba(175, 175, 175, 0.255) 0rem 0.3rem 7px);
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 20rem;
+  height: 46rem;
+  background: #060d2c;
+  border-radius: 18px;
+  .movie-picture {
+    border-radius: 28px;
+    aspect-ratio: 722/963;
+    object-fit: cover;
+    padding: 1rem;
+    filter: drop-shadow(rgba(175, 175, 175, 0.255) 0rem 0.3rem 7px);
+  }
+  .texts-container {
+    padding: 0 1.2rem;
+    text-align: justify;
+    h3 {
+      font-weight: 900;
+      margin-bottom: 0.4rem;
     }
-    .texts-container {
-      padding: 0 1.2rem;
-      text-align: justify;
-      h3 {
-        font-weight: 900;
-        margin-bottom: 0.4rem;
-      }
-      .released-date {
-        color: rgb(129, 129, 129);
-        margin-bottom: 0.1rem;
-      }
-      .rating {
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.8rem;
-        img {
-          height: 1.2rem;
-          width: 1.2rem;
-          object-fit: cover;
-        }
-      }
-      .genre {
-        display: inline-block;
-        margin-bottom: 0.5rem;
-        padding: 0.05rem 0.5rem 0.25rem 0.5rem;
-        background-color: rgba(133, 135, 186, 0.299);
-        border-radius: 10px;
-      }
-      .synopsis {
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-      }
-      .story-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        color: rgb(129, 129, 129);
-        -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
-        mask-image: linear-gradient(180deg, #000 40%, transparent);
+    .released-date {
+      color: rgb(129, 129, 129);
+      margin-bottom: 0.1rem;
+    }
+    .rating {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      img {
+        height: 1.2rem;
+        width: 1.2rem;
+        object-fit: cover;
       }
     }
-    .favorites-button {
-      position: absolute;
-      background-color: $color2;
-      padding: 0.6rem 1.6rem;
-      top: 92%;
-      right: 50%;
-      transform: translate(50%, 0);
+    .genre {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      padding: 0.05rem 0.5rem 0.25rem 0.5rem;
+      background-color: rgba(133, 135, 186, 0.299);
       border-radius: 10px;
-      border: none;
-      cursor: pointer;
     }
+    .synopsis {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .story-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: rgb(129, 129, 129);
+      -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+      mask-image: linear-gradient(180deg, #000 40%, transparent);
+    }
+  }
+  .favorites-button {
+    position: absolute;
+    background-color: $color2;
+    padding: 0.6rem 1.6rem;
+    top: 92%;
+    right: 50%;
+    transform: translate(50%, 0);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
   }
 }

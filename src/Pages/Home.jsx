@@ -1,14 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import SearchMovies from "../components/SearchMovies";
-import MovieCard from "../components/MovieCard";
+import MoviesData from "../components/MoviesData";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <SearchMovies />
-      <MovieCard />
+      <MoviesData />
     </>
   );
 };

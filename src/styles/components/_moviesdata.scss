@@ -1,3 +1,4 @@
+// for the search movie form :
 section {
   display: flex;
   justify-content: center;
@@ -13,7 +14,7 @@ section {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    input {
+    .type-your-movies {
       height: 3rem;
       border: none;
       border-top-right-radius: 15px;
@@ -25,16 +26,15 @@ section {
       font-size: 1.2rem;
     }
   }
-  button {
-    height: 3rem;
-    background-color: $color2;
-    border: none;
-    font-size: 1.2rem;
-  }
+
   .search-button {
     cursor: pointer;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    height: 3rem;
+    background-color: $color2;
+    border: none;
+    font-size: 1.2rem;
   }
 }
 .top-flop-container {
