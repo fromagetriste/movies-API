@@ -16,13 +16,19 @@ const MovieCard = ({
         <h3>{title}</h3>
         <p className="released-date">Released Date : {release_date}</p>
         <p className="rating">
-          {rating} / 10&nbsp;
+          {rating}&nbsp;
           <img src="../../public/img/star.svg" alt="star" />
         </p>
         <ul>
-          {genre.map((g) => (
-            <li className="genre">{genreSwitcher(g)}</li>
-          ))}
+          {genre ? (
+            genre.map((g, index) => (
+              <li key={index} className="genre">
+                {genreSwitcher(g)}
+              </li>
+            ))
+          ) : (
+            <li></li>
+          )}
         </ul>
         <p className="synopsis">Synopsis</p>
         <p className="story-text">{description}</p>

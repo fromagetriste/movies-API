@@ -10,7 +10,7 @@
   border-radius: 18px;
   overflow: hidden;
   .movie-picture {
-    transition: 0.1s;
+    transition: 0.15s;
     border-radius: 28px;
     aspect-ratio: 722/963;
     object-fit: cover;
@@ -18,7 +18,7 @@
     filter: drop-shadow(rgba(175, 175, 175, 0.255) 0rem 0.3rem 7px);
     &:hover {
       scale: 1.025;
-      transition: 0.1s;
+      transition: 0.15s;
     }
   }
   .texts-container {
@@ -27,6 +27,10 @@
     h3 {
       font-weight: 900;
       margin-bottom: 0.4rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     .released-date {
       color: rgb(129, 129, 129);
