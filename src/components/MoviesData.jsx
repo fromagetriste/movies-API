@@ -11,16 +11,14 @@ const MoviesData = () => {
   useEffect(() => {
     axios.get(API_Link).then((res) => setMovies(res.data.results));
   }, []);
+    
+    
 
   const optionsForDate = {
     year: "numeric",
     month: "long",
     day: "numeric",
   };
-
-  //   movies.sort((a, b) => {
-  //     return b.vote_average - a.vote_average;
-  //   });
 
   return (
     <>
@@ -72,6 +70,7 @@ const MoviesData = () => {
                   ? "../../public/img/poster.jpg"
                   : imagePreLink + movies.backdrop_path
               }
+              genre={movies.genre_ids}
             />
           </li>
         ))}

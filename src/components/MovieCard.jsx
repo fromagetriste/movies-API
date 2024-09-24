@@ -1,6 +1,14 @@
 import React from "react";
+import genreSwitcher from "./genreSwitcher";
 
-const MovieCard = ({ title, release_date, description, rating, image }) => {
+const MovieCard = ({
+  title,
+  release_date,
+  description,
+  rating,
+  image,
+  genre,
+}) => {
   return (
     <div className="card-container">
       <img className="movie-picture" src={image} alt="movie title" />
@@ -11,7 +19,11 @@ const MovieCard = ({ title, release_date, description, rating, image }) => {
           {rating} / 10&nbsp;
           <img src="../../public/img/star.svg" alt="star" />
         </p>
-        <span className="genre">Aventure</span>
+        <ul>
+          {genre.map((g) => (
+            <li className="genre">{genreSwitcher(g)}</li>
+          ))}
+        </ul>
         <p className="synopsis">Synopsis</p>
         <p className="story-text">{description}</p>
       </div>

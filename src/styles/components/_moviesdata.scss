@@ -35,6 +35,11 @@ section {
     background-color: $color2;
     border: none;
     font-size: 1.2rem;
+    transition: 0.2s;
+    &:hover {
+      background-color: $color4;
+      transition: 0.2s;
+    }
   }
 }
 .top-flop-container {
@@ -45,6 +50,11 @@ section {
     width: 50%;
     height: 3rem;
     border: none;
+    transition: 0.2s;
+    &:hover {
+      background-color: $color4;
+      transition: 0.2s;
+    }
   }
   .top-button {
     cursor: pointer;
