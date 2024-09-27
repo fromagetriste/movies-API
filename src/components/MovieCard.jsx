@@ -80,7 +80,7 @@ const MovieCard = ({
           type="button"
           onClick={() => {
             deleteStorage(keyMovie);
-            window.location.reload();
+            document.location.reload();
           }}
         >
           Delete from Favorites
