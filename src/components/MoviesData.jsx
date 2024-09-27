@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "./MovieCard";
-import poster from "./img/poster.jpg";
 
 const MoviesData = () => {
   const [title, setTitle] = useState("Lord of the Ring");
@@ -102,7 +101,7 @@ const MoviesData = () => {
                 }
                 image={
                   movies.backdrop_path === null
-                    ? { poster }
+                    ? "/img/poster.jpg"
                     : imagePreLink + movies.backdrop_path
                 }
                 genre={movies.genre_ids}
