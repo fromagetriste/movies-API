@@ -73,6 +73,7 @@ const MoviesData = () => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          maxWidth: "100vw",
         }}
       >
         {/* Returning MovieCard component, mapping through data */}
