@@ -3,7 +3,7 @@ import axios from "axios";
 import MovieCard from "./MovieCard";
 
 const MoviesData = () => {
-  const [title, setTitle] = useState("Ring");
+  const [title, setTitle] = useState("Lord of the Ring");
   const [movies, setMovies] = useState([]);
   const [sortRanking, setSortRanking] = useState("");
   const imagePreLink = "https://image.tmdb.org/t/p/original/";
@@ -31,7 +31,7 @@ const MoviesData = () => {
             <div className="search-container">
               <input
                 className="type-your-movies"
-                type="text"
+                type="search"
                 name="search-movies"
                 placeholder="Type a movie title"
                 onChange={(e) => setTitle(e.target.value)}
@@ -81,7 +81,7 @@ const MoviesData = () => {
               return a.vote_average - b.vote_average;
             }
           })
-          .map((movies) => (
+          .map((movies, index) => (
             <li key={movies.id}>
               <MovieCard
                 title={movies.original_title}
@@ -105,6 +105,9 @@ const MoviesData = () => {
                     : imagePreLink + movies.backdrop_path
                 }
                 genre={movies.genre_ids}
+                keyMovie={movies.id}
+                isHomePage={true}
+                index={index}
               />
             </li>
           ))}
