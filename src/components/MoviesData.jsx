@@ -22,11 +22,15 @@ const MoviesData = () => {
     day: "numeric",
   };
 
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       {/* redenring the form for searching movies by title : */}
       <section>
-        <form action="">
+        <form action="" onSubmit={HandleSubmit}>
           <div className="form-container">
             <div className="search-container">
               <input
