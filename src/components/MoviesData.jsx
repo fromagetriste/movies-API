@@ -101,7 +101,7 @@ const MoviesData = () => {
                 }
                 image={
                   movies.backdrop_path === null
-                    ? "/img/poster.jpg"
+                    ? "./img/poster.jpg"
                     : imagePreLink + movies.backdrop_path
                 }
                 genre={movies.genre_ids}

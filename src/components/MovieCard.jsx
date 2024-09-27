@@ -47,7 +47,7 @@ const MovieCard = ({
         <p className="released-date">Released Date : {release_date}</p>
         <p className="rating">
           {rating}&nbsp;
-          <img src="/img/star.svg" alt="star" />
+          <img src="./img/star.svg" alt="star" />
         </p>
         <ul>
           {genre ? (
