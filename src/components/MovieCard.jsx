@@ -1,33 +1,6 @@
 import React from "react";
 import genreSwitcher from "./genreSwitcher";
 
-const addStorage = (keyMovie) => {
-  let storedData = window.localStorage.movies
-    ? window.localStorage.movies.split(",")
-    : [];
-  if (!storedData.includes(keyMovie.toString())) {
-    storedData.push(keyMovie);
-    window.localStorage.movies = storedData;
-  }
-};
-
-const deleteStorage = (keyMovie) => {
-  let storedData = window.localStorage.movies.split(",");
-  let newData = storedData.filter((id) => id != keyMovie);
-  window.localStorage.movies = newData;
-};
-
-function changeStyle(index) {
-  const favButton = document.getElementsByClassName(`button-number-${index}`);
-  let i;
-  for (i = 0; i < favButton.length; i++) {
-    favButton[i].style.backgroundColor = "#005b00";
-    favButton[i].style.transition = "0.5s";
-    console.log(favButton[i]);
-    favButton[i].innerHTML = "Added";
-  }
-}
-
 const MovieCard = ({
   title,
   release_date,
@@ -39,6 +12,33 @@ const MovieCard = ({
   isHomePage,
   index,
 }) => {
+  const addStorage = (keyMovie) => {
+    let storedData = window.localStorage.movies
+      ? window.localStorage.movies.split(",")
+      : [];
+    if (!storedData.includes(keyMovie.toString())) {
+      storedData.push(keyMovie);
+      window.localStorage.movies = storedData;
+    }
+  };
+
+  const deleteStorage = (keyMovie) => {
+    let storedData = window.localStorage.movies.split(",");
+    let newData = storedData.filter((id) => id != keyMovie);
+    window.localStorage.movies = newData;
+  };
+
+  function changeStyle(index) {
+    const favButton = document.getElementsByClassName(`button-number-${index}`);
+    let i;
+    for (i = 0; i < favButton.length; i++) {
+      favButton[i].style.backgroundColor = "#2c2b41";
+      favButton[i].style.transition = "0.5s";
+      // console.log(favButton[i]);
+      favButton[i].innerHTML = "Added";
+    }
+  }
+
   return (
     <div className="card-container">
       <img className="movie-picture" src={image} alt="movie title" />
@@ -83,7 +83,7 @@ const MovieCard = ({
             window.location.reload();
           }}
         >
-          Delete from Favorites
+          Delete
         </button>
       )}
     </div>
