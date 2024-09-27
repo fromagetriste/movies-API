@@ -1,5 +1,6 @@
 import React from "react";
 import genreSwitcher from "./genreSwitcher";
+import starIcon from "./img/star.svg";
 
 const addStorage = (keyMovie) => {
   let storedData = window.localStorage.movies
@@ -47,7 +48,7 @@ const MovieCard = ({
         <p className="released-date">Released Date : {release_date}</p>
         <p className="rating">
           {rating}&nbsp;
-          <img src="/public/img/star.svg" alt="star" />
+          <img src={starIcon} alt="star" />
         </p>
         <ul>
           {genre ? (
